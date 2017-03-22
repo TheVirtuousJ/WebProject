@@ -60,3 +60,6 @@ gem 'slim-rails'
 gem 'inherited_resources', git: 'https://github.com/activeadmin/inherited_resources'
 gem 'activeadmin', git: 'https://github.com/activeadmin/activeadmin'
 gem 'devise'
+
+# Magic SDK
+gem 'mtg_sdk'
