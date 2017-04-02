@@ -30,3 +30,27 @@ end
 supertype.each do |supertype|
   Supertype.create(name: supertype)
 end
+
+cards = MTG::Card.where(set: 'AER').all
+
+cards.each do |card|
+  Card.create(name: card.name,
+              multiverseid: card.multiverse_id,
+              layout: card.layout,
+              mana_cost: card.mana_cost,
+              cmc: card.cmc,
+              full_type: card.type,
+              rarity: card.rarity,
+              text: card.text,
+              flavour: card.flavor,
+              artist: card.artist,
+              number: card.number,
+              power: card.power,
+              toughness: card.toughness,
+              loyalty: card.loyalty,
+              image_url: card.image_url,
+              set: card.set,
+              set_name: card.set_name,
+              price: 0.05,
+              quantity: 5)
+end
