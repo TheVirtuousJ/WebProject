@@ -1,0 +1,43 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  multiverseid: 1
+  layout: MyString
+  mana_cost: MyString
+  cmc: 1
+  full_type: MyString
+  rarity: MyString
+  text: MyText
+  flavour: MyString
+  artist: MyString
+  number: MyString
+  power: MyString
+  toughness: MyString
+  loyalty: MyString
+  image_url: MyString
+  set: MyString
+  set_name: MyString
+  price: 9.99
+  quantity: 1
+
+two:
+  name: MyString
+  multiverseid: 1
+  layout: MyString
+  mana_cost: MyString
+  cmc: 1
+  full_type: MyString
+  rarity: MyString
+  text: MyText
+  flavour: MyString
+  artist: MyString
+  number: MyString
+  power: MyString
+  toughness: MyString
+  loyalty: MyString
+  image_url: MyString
+  set: MyString
+  set_name: MyString
+  price: 9.99
+  quantity: 1

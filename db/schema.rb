@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170322163503) do
+ActiveRecord::Schema.define(version: 20170402233858) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -48,11 +48,50 @@ ActiveRecord::Schema.define(version: 20170322163503) do
 
   create_table "cards", force: :cascade do |t|
     t.string   "name"
-    t.integer  "multiverse_index"
-    t.integer  "quantity"
+    t.integer  "multiverseid"
+    t.string   "layout"
+    t.string   "mana_cost"
+    t.integer  "cmc"
+    t.string   "full_type"
+    t.string   "rarity"
+    t.text     "text"
+    t.string   "flavour"
+    t.string   "artist"
+    t.string   "number"
+    t.string   "power"
+    t.string   "toughness"
+    t.string   "loyalty"
+    t.string   "image_url"
+    t.string   "set"
+    t.string   "set_name"
     t.decimal  "price"
-    t.datetime "created_at",       null: false
-    t.datetime "updated_at",       null: false
+    t.integer  "quantity"
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+  end
+
+  create_table "colours", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "subtypes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "supertypes", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "types", force: :cascade do |t|
+    t.string   "name"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
   end
 
 end

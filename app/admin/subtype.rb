@@ -1,4 +1,4 @@
-ActiveAdmin.register Card do
+ActiveAdmin.register Subtype do
 # See permitted parameters documentation:
 # https://github.com/activeadmin/activeadmin/blob/master/docs/2-resource-customization.md#setting-up-strong-parameters
 #
@@ -11,9 +11,6 @@ ActiveAdmin.register Card do
 #   permitted << :other if params[:action] == 'create' && current_user.admin?
 #   permitted
 # end
-
-permit_params :name, :multiverseid, :layour, :mana_cost, :cmc, :full_type,
-              :rarity, :text, :flavour, :artist, :number, :power, :toughness, :loyalty,
-              :image_url, :set, :set_name, :price, :quantity
+permit_params :name, :created_at, :updated_at
 
 end
