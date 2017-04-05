@@ -54,3 +54,6 @@ cards.each do |card|
               price: 0.05,
               quantity: 5)
 end
+
+Page.create(name: 'contact', permalink: 'contact', content: 'This is the contact page')
+Page.create(name: 'about', permalink: 'about', content: 'This is the about page')
