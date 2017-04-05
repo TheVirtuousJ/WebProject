@@ -7,5 +7,8 @@ html
     = javascript_include_tag "application", 'data-turbolinks-track' => true
     = csrf_meta_tags
 
-  body
-    = yield
+  body.body
+    = render "layouts/header"
+    .content  
+      == yield
+    = render "layouts/footer"
