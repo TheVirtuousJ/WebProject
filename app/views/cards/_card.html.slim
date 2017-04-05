@@ -1,0 +1,26 @@
+| Want to test
+.card
+  = image_tag(card.image_url, class: 'card_image')
+  - if full_details
+    .label Card Name: #{card.name}
+    .label Mana Cost: #{card.mana_cost}
+    .label Converted Mana Cost: #{card.cmc}
+    .label Types: #{card.full_type}
+    .label Card Text: #{card.text}
+    - if card.flavour
+      .label Flavour Text: #{card.flavour}
+    - if card.power
+      .label P/T: #{card.power} / #{card.toughness}
+    - if card.loyalty
+      .label Loyalty: #{card.loyalty}
+    .label Set: #{card.set_name} - #{card.set} 
+    .label Rarity: #{card.rarity}
+    .label Card Number: #{card.number}
+    .label MultiverseID: #{card.multiverseid}
+    .label Artist: #{card.artist}
+    .label Card Price: #{card.price}
+    .label Quantity: #{card.quantity}
+  - else
+    #{card.name}#{card.mana_cost}()#{card.cmc})
+    #{card.full_type}(#{card.power}/#{card.toughness})
+    #{card.text}

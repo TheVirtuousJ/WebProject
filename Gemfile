@@ -63,3 +63,6 @@ gem 'devise'
 
 # Magic SDK
 gem 'mtg_sdk'
+
+# Pagination
+gem 'kaminari'

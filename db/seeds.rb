@@ -48,7 +48,7 @@ cards.each do |card|
               power: card.power,
               toughness: card.toughness,
               loyalty: card.loyalty,
-              image_url: card.image_url,
+              image_url: "#{card.set}/Card#{card.multiverse_id}.jpg",
               set: card.set,
               set_name: card.set_name,
               price: 0.05,
