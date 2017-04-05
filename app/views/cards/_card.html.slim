@@ -1,5 +1,5 @@
 .card
-  = image_tag(card.image_url, class: 'card_image')
+  = link_to image_tag(card.image_url, class: 'card_image'), card
   - if full_details
     .label Card Name: #{card.name}
     .label Mana Cost: #{card.mana_cost}

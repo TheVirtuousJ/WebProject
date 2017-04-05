@@ -1,6 +1,10 @@
 class CardsController < ApplicationController
   def index
-    @cards = Card.order(:number).page params[:page]
+    if params[:search]
+      @cards = Card.search(params[:search]).order(:number).page(params[:page])
+    else
+      @cards = Card.all.order(:number).page(params[:page])
+    end
   end
 
   def show

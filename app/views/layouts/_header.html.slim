@@ -1,1 +1,6 @@
 header
+  p
+    = form_tag cards_path, method: 'get' do
+      = text_field_tag :search, params[:search], placeholder: "Search cards..."
+      = submit_tag "Search", name: nil 
+    

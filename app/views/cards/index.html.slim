@@ -1,4 +1,7 @@
 h1 Cards#index
 p Find me in app/views/cards/index.html.
-= render partial: 'card', collection: @cards, locals: {full_details: false}
-= paginate @cards
+- if @cards.present?
+  = render partial: 'card', collection: @cards, locals: {full_details: false}
+  = paginate @cards
+- else
+  p There are no cards containing the term(s) #{params[:search]}
